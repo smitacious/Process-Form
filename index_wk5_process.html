@@ -1,0 +1,217 @@
+﻿<!doctype html>
+<html>
+<!-- Created by: Norris Smith, skeleton. html -->
+<!-- Last Modified: 3/30/16 -->
+<head>
+    <title> Norris Smith: Pre-1923 Spring 2016</title>
+    <meta charset="UTF-8">
+    <meta name="keywords"
+          content="Pre-1923, Gutenberg Project, Norris Smith" />
+    <meta name="desription" content="My Sample Web Page" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, intial-scale=1.0"/>
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet" />
+    <link href="css/about.css" type="text/css" rel="stylesheet" />
+    <script src="js/onsubmit_event.js">
+        function displaytext() {
+            var firstName = document.getElementById("firstName").value;
+            var lastName = document.getElementById("lastName").value;
+            var address = document.getElementById("address").value;
+            var city = document.getElementById("city").value;
+            var state = document.getElementById("state").value;
+            var zipcode = document.getElementById("zipcode").value;
+            var userId = document.getElementById("userId").value;
+            var pswd = document.getElementById("pswd").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+
+            document.writeln("Thanks for your feedback");
+        }
+
+    </script>
+</head>
+<body>
+    <!-- insert header here -->
+    <header>
+        <!-- insert Top Menu here -->
+        <img class="logo" src="images/marine-emblem.png" alt="Logo" />
+        <nav class="topMenu">
+            <a href="home.html"> Home </a> |
+            <a href="about.html"> About Us</a> |
+            <a href="contact.html"> Contact Us</a> 
+        </nav>
+        <h1> Pre-1923: Authors, Artists, Books and Stories </h1>
+    </header>
+ 
+    
+    <!-- insert Horizontal Menu here -->
+        <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collaspe" data-target="#defaultNavbar1"><br>
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand" href="home.html">Home</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapsed navbar-collaspe" id="defaultNavbar1">
+                <!-- First Drop Down -->
+                <ul class="nav navbar-nav">
+                    <!-- Old code 
+                        <li class="actvive"><a href="about.html">About<span class="sr-only">(current)</span></a></li> -->
+                    <li class="dropdown"><a href="about.html" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                        aria-expanded="false">About <span class="caret"></span></a>
+                        
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="feedback.html">Feedback</a></li>
+                            <li><a href="login.html">Login</a></li>
+                            <li><a href="location.html">Location</a></li>
+                            <li><a href="http://www.gutenberg.org/" target="_blank">Gutenberg Projefct</a></li>
+                        </ul>
+                    </li>
+                <!--Second Drop Down -->
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                        aria-expanded="false">Pre-1923 Books <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="recommended.html">Recommended Books</a></li>
+                            <li><a href="popular.html">Most Popular Books</a></li>
+                            <!-- Line Dividers -->
+                            <li class="divider"></li>
+                            <li><a href="subject.html">My Favorite Subject </a></li>
+                            <li><a href="author.html">My Favorite Author</a></li>
+                            <li><a href="favorite.html">My Favorite Book or Story</a></li>
+                            <li><a href="excerpt.html">Book Excerpt</a></li>
+                            <li class="divider"></li>
+                            <li><a href="pre1923.html">Other Pre-1923 Favorites</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!--Right Menu-->
+                <ul class="nav navbar-nav navbar-left">
+                    <!-- Old <li><a href="http://www.gutenberg.org/">Project</a></li>-->
+                    <li><a href="http://www.gutenberg.org">Gutenberg</a></li>
+                    <!-- Third Drop Down -->
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                            aria-expanded="false">Learn More <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="http://www.google.com">Google</a></li>
+                                <li class="divider"></li>
+                                <li><a href="http://www.amazon.com">Amazon</a></li>
+                            </ul>
+                        </li>
+                </ul>
+                
+                <!-- Search Tools -->
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Search!</button>
+                </form>
+            </div> <!-- end navbar-collapse -->
+        </div> <!-- end container-fluid -->
+        </nav>
+  
+        <!-- End Main Menu -->
+  
+        <div class="main">
+
+            <!-- insert main content here -->
+            <section class="content">
+                <h1>Let us know your thoughts and opinions below.</h1>
+                <form action="#" method="post" onsubmit="return ValidationEvent()">
+                    First Name :
+                        <input id="firstName" name="firstName" placeholder="First Name" type="text" maxlength="25" size="25" required>
+                    &nbsp;&nbsp;
+                    Last Name :
+                        <input id="lastName" name="lastName" placeholder="Last Name" type="text" maxlength="25" size="25" required>
+                    <br /><br />
+                    Street Address
+                        <input id="address" name="address" placeholder="Address" type="text" maxlength="50" size="50" required/>
+                    <br /><br />    
+                    City: 
+                        <input id="city" name="city" placeholder="City" type="text" maxlength="25" size="25" required> 
+                    &nbsp; &nbsp;&nbsp; &nbsp; 
+                    State: 
+                        <input id="state" name="state" placeholder="State" type="text" maxlength="2" size="2" required>
+                    &nbsp; &nbsp;&nbsp; &nbsp; 
+                    Zip Code: 
+                        <input id="zipcode" name="zipcode" placeholder="Zip" maxlength="5" size="5"  required>
+                    <br /><br />
+                    User Name: 
+                    <input id="userId" name="userId" placeholder="User Id" type="text" min="10" maxlength="25" size="25" required >
+                    &nbsp; &nbsp;&nbsp; &nbsp;
+                    User Password: 
+                        <input id="pswd" name="pswd" placeholder="Password" type="password" min="12" maxlength="24" size="24" required>
+                    <br /> <br />
+                    Email :
+                        <input id="email" name="email" placeholder="Valid Email" type="text" maxlength="30" size="30" required>
+                    &nbsp; &nbsp;&nbsp; &nbsp;
+                    Phone No. :
+                        <input id="phone" name="phone" placeholder="Phone No." min="10" maxlength="10" size="10" required>
+                    <br /><br />
+                    Number of Book currently read?
+                        <input id="bookCount" name="bookCount" placeholder="Books" maxlength="5" size="6" required>
+                    &nbsp; &nbsp;&nbsp; &nbsp;
+                    Read Books on Mobile Device:
+                    &nbsp; &nbsp;
+                    Yes
+                        <input id="yes" name="reader" type="radio" value="Yes">
+                    No
+                        <input id="no" name="reader" type="radio" value="No">
+                    <br /><br />
+                    How did you hear about this site?
+                    <select name="hearing">
+                        <option value="select">Select</option>
+                        <option value="google">Google</option>
+                        <option value="bing">Bing</option>
+                        <option value="yahoo">Yahoo</option>
+                        <option value="aol">AOL</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <br /><br />
+                    Favorite Author:
+                        <select name="authors">
+                            <option value="select">Select</option>
+                            <option value="king">Stephen King</option>
+                            <option value="rowling">JK Rowling</option>
+                            <option value="mmoyes">Jojo Movies</option>
+                            <option value="other2">Other</option>
+                        </select>
+                    <br /><br />
+                    <b>Favorite Genre of Books:</b>
+                    <br />
+                        <input type="radio" name="comedy" value="genre"> Comedy
+                        <input type="radio" name="drama" value="genre"> Drama
+                        <input type="radio" name="nonfiction" value="genre"> Non-Fiction
+                        <input type="radio" name="fiction" value="genre"> Fiction
+                        <input type="radio" name="romance" value="genre"> Romance
+                        <input type="radio" name="satire" value="genre"> Satire
+                        <input type="radio" name="tragedy" value="genre"> Tragedy
+                        <input type="radio" name="tragicomedy" value="genre"> Tragicomedy
+                        <input type="radio" name="classics" value="genre"> Classics
+                        <input type="radio" name="western" value="genre"> Westerns
+                    <br /><br />
+                    Please feel free to leave your comments <br /><br />
+                    <textarea name="text1" cols="40" rows="10" style="width:90%; height:100px;"></textarea>
+                    <br /><br />
+                    <input type="submit" value="Submit" >
+                    <br /><br />
+                    <p id="demo" onclick="dispalytext()">Click me to display your results (innerHTML).</p>
+                    </form>
+            </section>
+        </div>
+    <!--  insert footer here -->
+    <footer>
+        Created: Norris Smith 04/11/16 CS321 S2A16
+    </footer>
+<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.js" type="text/javascript"></script> 
+</body>
+</html>
